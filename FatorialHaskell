@@ -1,0 +1,9 @@
+fat :: Int -> Int
+fat 0 = 1
+fat n = n * fat (n - 1)
+main :: IO ()
+main = do
+    putStrLn "Digite um número:"
+    input <- getLine           
+    let num = read input :: Int 
+    print (fat num)  
