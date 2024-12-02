@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int nuAleatorio, pal, ten;
+    srand(time(0));
+    nuAleatorio = rand() % 10 + 1;
+    ten = 0;
+    do {
+        printf("Digite um numero: ");
+        scanf("%d", &pal);
+        ten++;
+        if (pal < nuAleatorio) {
+            printf("O numero e maior!\n");
+        } else if (pal > nuAleatorio) {
+            printf("O numero e menor!\n");
+        } else {
+            printf("Acertou! Numero de tentativas: %d\n", ten);
+        }
+    } while (pal != nuAleatorio);
+    printf("Digite qualquer tecla para finalizar.\n");
+    getchar(); 
+    getchar(); 
+    return 0;
+}
