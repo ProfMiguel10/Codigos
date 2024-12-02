@@ -1,0 +1,20 @@
+#include <stdio.h>
+int mult(int a, int b) {
+    return a * b;
+}
+int restoDiv(int a, int b) {
+    return a % b;
+}
+
+int main() {
+    int n1, n2;
+    printf("Digite o primeiro número: ");
+    scanf("%d", &n1);
+    printf("Digite o segundo número: ");
+    scanf("%d", &n2);
+    int multi = mult(n1, n2);
+    int resto = restoDiv(n1, n2);
+    printf("%d\n",  multi);
+    printf("%d\n", resto);
+    return 0;
+}
