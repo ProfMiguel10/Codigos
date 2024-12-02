@@ -1,0 +1,23 @@
+program Jogo;
+uses
+  crt;
+var
+  nuAleatorio, pal, ten: integer;
+begin
+  randomize;
+  nuAleatorio := random(10) + 1;
+  ten := 0;
+  repeat
+    write('Digite um número: ');
+    readln(pal);
+    inc(ten);
+    if pal < nuAleatorio then
+      writeln('O número é maior!')
+    else if pal > nuAleatorio then
+      writeln('O número é menor!')
+    else
+      writeln('Acertou! Número de ten: ', ten);
+  until pal = nuAleatorio;
+  writeln('Digite qualquer tecla para finalizar');
+  readkey;
+end.
